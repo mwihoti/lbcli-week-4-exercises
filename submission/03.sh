@@ -9,5 +9,5 @@ message_hex=$(echo -n "btrust builder 2026" | xxd -p | tr -d '\n')
 
 # Create raw transaction with OP_RETURN output for the message
 bitcoin-cli -named createrawtransaction \
-  inputs='''[ { "txid": "c8b0928edebbec5e698d5f86d0474595d9f6a5b2e4e3772cd9d1005f23bdef7725", "vout": 0 } ]''' \
+  inputs='''[ { "txid": "c8b0928edebbec5e698d5f86d0474595d9f6a5b2e4e3772cd9d1005f23bdef77", "vout": 0 } ]''' \
   outputs='''{ "2MvLcssW49n9atmksjwg2ZCMsEMsoj3pzUP": 0.1999, "data": "6a" + "'"$message_hex"'" }'''

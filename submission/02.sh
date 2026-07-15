@@ -7,6 +7,6 @@
 # Calculate locktime (current block 25 + 2 weeks = 25 + 2016 = 2041)
 # Create raw transaction with locktime
 bitcoin-cli -regtest -named createrawtransaction \
-  inputs='''[ { "txid": "c8b0928edebbec5e698d5f86d0474595d9f6a5b2e4e3772cd9d1005f23bdef7725", "vout": 0 } ]''' \
+  inputs='''[ { "txid": "c8b0928edebbec5e698d5f86d0474595d9f6a5b2e4e3772cd9d1005f23bdef77", "vout": 0 } ]''' \
   outputs='''{ "2MvLcssW49n9atmksjwg2ZCMsEMsoj3pzUP": 0.2 }''' \
   locktime=2041
