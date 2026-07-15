@@ -6,7 +6,7 @@ transaction="01000000000101c8b0928edebbec5e698d5f86d0474595d9f6a5b2e4e3772cd9d10
 decoded=$(bitcoin-cli -regtest decoderawtransaction "$transaction")
 txid=$(echo "$decoded" | jq -r '.txid')
 
-bitcoin-cli -regtest -named createrawtransaction \
+printf '%s' "$(bitcoin-cli -regtest -named createrawtransaction \
   inputs='''[ { "txid": "'"$txid"'", "vout": 0, "sequence": 4294967294 }  ]''' \
   outputs='''{ "2MvLcssW49n9atmksjwg2ZCMsEMsoj3pzUP": 0.2 }''' \
-  locktime=2041
+  locktime=2041)"
